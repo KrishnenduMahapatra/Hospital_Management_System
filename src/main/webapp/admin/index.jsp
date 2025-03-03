@@ -17,7 +17,6 @@
 					aria-current="page" href="search.jsp">Search</a></li>
 			</ul>
 			
-			
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 				<c:if test="${empty userObj }">
 

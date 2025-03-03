@@ -1,22 +1,29 @@
+<%@page import="com.db.DBConnect"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="UTF-8"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Index</title>
+<meta charset="ISO-8859-1">
+<title>Index Page</title>
+<%@include file="component/allcss.jsp"%>
+
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-
 </style>
-<%@include file="component/allcss.jsp"%>
+
+
 </head>
 <body>
 	<%@include file="component/navbar.jsp"%>
+	
+	
 
-	<div id="carouselExampleIndicators" class="carousel slide">
+	<div id="carouselExampleIndicators" class="carousel slide"
+		data-bs-ride="carousel">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators"
 				data-bs-slide-to="0" class="active" aria-current="true"
@@ -28,16 +35,16 @@
 		</div>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img src="img/Medical .jpg" height="500px" class="d-block w-100"
-					alt="...">
+				<img src="img/hos.jpg" class="d-block w-100" alt="..."
+					height="500px">
 			</div>
 			<div class="carousel-item">
-				<img src="img/op1.jpg" height="500px" class="d-block w-100"
-					alt="...">
+				<img src="img/hos2.jpg" class="d-block w-100" alt="..."
+					height="500px">
 			</div>
 			<div class="carousel-item">
-				<img src="img/doc2.jpg" height="500px" class="d-block w-100"
-					alt="...">
+				<img src="img/hos3.jpg" class="d-block w-100" alt="..."
+					height="500px">
 			</div>
 		</div>
 		<button class="carousel-control-prev" type="button"
@@ -53,7 +60,8 @@
 	</div>
 
 	<div class="container p-3">
-		<p class="text-center fs-2">Key features of our Hospital</p>
+		<p class="text-center fs-2 ">Key Features of our Hospital</p>
+
 		<div class="row">
 			<div class="col-md-8 p-5">
 				<div class="row">
@@ -61,7 +69,8 @@
 						<div class="card paint-card">
 							<div class="card-body">
 								<p class="fs-5">100% Safety</p>
-								<p>Our hospital is 100% safe and secure for our patients.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Voluptatem, inventore</p>
 							</div>
 						</div>
 					</div>
@@ -69,7 +78,8 @@
 						<div class="card paint-card">
 							<div class="card-body">
 								<p class="fs-5">Clean Environment</p>
-								<p>Our hospital is clean and hygienic for our patients.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Voluptatem, inventore</p>
 							</div>
 						</div>
 					</div>
@@ -77,7 +87,8 @@
 						<div class="card paint-card">
 							<div class="card-body">
 								<p class="fs-5">Friendly Doctors</p>
-								<p>Our doctors are friendly and helpful to our patients.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Voluptatem, inventore</p>
 							</div>
 						</div>
 					</div>
@@ -85,64 +96,74 @@
 						<div class="card paint-card">
 							<div class="card-body">
 								<p class="fs-5">Medical Research</p>
-								<p>Our hospital is equipped with latest medical research
-									technology.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Voluptatem, inventore</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 			<div class="col-md-4">
-				<img alt="" src="img/doc3.png" height="340px">
+				<img alt="" src="img/doct.jpg">
 			</div>
 
 		</div>
 	</div>
-	<hr>
-	<div class="container p-2">
-		<p class="text-center fs-2">Our Team</p>
 
+	<hr>
+
+	<div class="container p-2">
+		<p class="text-center fs-2 ">Our Team</p>
+		
 		<div class="row">
-			<div class="col-md-3
-			">
-				<div class="card paint-card ">
-					<div class="card-body d-flex flex-column align-items-center text-center">
-						<img alt="" width="250px" height="230px" src="img/doc1.jpg">
-						<p class="fs-bold fs-5">Dr. John Doe</p>
+			<div class="col-md-3">
+				<div class="card paint-card">
+					<div class="card-body text-center">
+						<img src="img/doc1.jpg" width="250px" height="300px">
+						<p class="fw-bold fs-5">Samuani Simi</p>
 						<p class="fs-7">(CEO & Chairman)</p>
 					</div>
 				</div>
 			</div>
+
 			<div class="col-md-3">
-                <div class="card paint-card">
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <img alt="" width="250px" height="230px" src="img/doc2.jpg">
-                        <p class="fs-bold fs-5">Dr. Jane Sung</p>
-                        <p class="fs-7">Surgery Specialist</p>
-                    </div>
-             	</div>
-             </div>
+				<div class="card paint-card">
+					<div class="card-body text-center">
+						<img src="img/doc2.jpg" width="250px" height="300px">
+						<p class="fw-bold fs-5">Dr.Siva Kumar</p>
+						<p class="fs-7">(Chief Doctor)</p>
+					</div>
+				</div>
+			</div>
+
 			<div class="col-md-3">
-                <div class="card paint-card">
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <img alt="" width="250px" height="230px" src="img/Doc4.jpeg">
-                        <p class="fs-bold fs-5">Dr. Shanthanu</p>
-                        <p class="fs-7">(MD)</p> 
-                    </div>
-             	</div>
-             </div>
+				<div class="card paint-card">
+					<div class="card-body text-center">
+						<img src="img/doc3.jpg" width="250px" height="300px">
+						<p class="fw-bold fs-5">Dr. Niuise Paule</p>
+						<p class="fs-7">(Chief Doctor)</p>
+					</div>
+				</div>
+			</div>
+
 			<div class="col-md-3">
-                <div class="card paint-card">
-                    <div class="card-body d-flex flex-column align-items-center text-center">
-                        <img alt="" width="250px" height="230px" src="img/Doc5.jpeg">
-                        <p class="fs-bold fs-5">Dr. Anita B.R.</p>
-                        <p class="fs-7">Physician</p>
-                    </div>
-             	</div>
-             </div>
+				<div class="card paint-card">
+					<div class="card-body text-center">
+						<img src="img/doc4.jpg" width="250px" height="300px">
+						<p class="fw-bold fs-5">Dr. Mathue Samuel</p>
+						<p class="fs-7">(Chief Doctor)</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
+
 	</div>
-	
-	<%@include file="component/footer.jsp"%>
+
+
+
+<%@include file="component/footer.jsp" %>
+
 </body>
 </html>
